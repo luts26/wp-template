@@ -1,0 +1,483 @@
+/*
+	Theme Name: Chooce Travel
+	Theme URI: http://chooce-travel.ua/
+	Description: Тема для туристического сайта, с информацией о странах, городах и месных состопремечательностей. Реализован вывод слайдера который будет показывать ваши изображения на всех страницах. Добавлять слайды или изменять изображения удобно через админпанель, просто добавить новую миниатюру. Добавлять виджеты можно правом сайдбаре и в футере.
+	Version: 1.0
+	Author: x-man
+	Author URI: http://ms.local/
+*/
+
+* {
+	margin:0;
+	padding:0;
+}
+body{
+	background:#edece8 url(images/bg-head.jpg) center top no-repeat;
+}
+.clear{
+	clear: both;
+}
+.main{
+	margin:0 auto;
+	width: 970px;
+	}
+	.header{
+		height: 250px;
+		}
+		.header h2{
+			color:#3f282f;
+			font:24px "Century Gothic";
+			float: left;
+			margin-top: 10px;
+		}
+		.header a{
+			color:#716b5b;
+			font:26px "Century Gothic";
+			float: right;
+			margin:15px 10px 0 0;
+			text-decoration: none;
+		}
+		.header a span{
+			color:#a73700;
+		}
+.content_main{
+	background:#f7f7f7;
+	border:1px solid #fff;
+	-moz-border-radius: 15px 15px 0 0;
+	-webkit-border-radius: 15px 15px 0 0;
+	border-radius: 15px 15px 0 0;
+	overflow: hidden;
+	}
+	.menu{
+		background-color: #3f282f;
+		-moz-border-radius: 15px 15px 0 0;
+		-webkit-border-radius: 15px 15px 0 0;
+		border-radius: 15px 15px 0 0;
+		list-style: none;
+		}
+		.menu ul{
+			display: inline-block;
+		}
+		.menu li{
+			background:url(images/menu-bg.jpg) left center no-repeat;
+			display: inline-block;
+		}
+		.menu li:first-child{
+			background:none;
+		}
+		.menu li > a{
+			color:#fff;
+			display: inline-block;
+			font:18px "Century Gothic";
+			padding:15px 30px;
+			text-decoration: none;
+		}
+		.menu li > a:hover{
+			text-decoration: underline;
+		}
+		.search_main{
+			float: right;
+			margin:11px 25px 0 0;
+		}
+		.search_txt{
+			background-color: #f7f7f7;
+			border:1px solid #fff;
+			-moz-border-radius: 2px;
+			-webkit-border-radius: 2px;
+			border-radius: 2px;
+			height: 23px;
+			margin:2px 10px 0 0;
+			vertical-align: top;
+			width: 230px;
+		}
+.content{
+	float: left;
+	margin-left: 20px;
+	width: 700px;
+	}
+	.page_title{
+		border-bottom: 1px dashed #ccc;
+		color:#3f282f;
+		font:15px Verdana;
+		margin-bottom: 20px;
+	}
+	.post_main{
+		background-color: #f5f5f5;
+		border:1px solid #e7e2e3;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+		overflow: hidden;
+		margin-bottom: 20px;
+		}
+		.post_main h1{
+			background-color: #e2e0e1;
+			-moz-border-radius: 8px 8px 0 0 ;
+			-webkit-border-radius: 8px 8px 0 0;
+			border-radius: 8px 8px 0 0;
+			font:normal 24px Verdana;
+			padding:5px 15px 8px 15px;
+			margin-bottom: 5px;
+			}
+			.post_main h1 a{
+				color:#3f282f;
+				text-decoration: none;
+			}
+			.post_main h1 a:hover{
+				text-decoration: underline;
+			}
+			.post_main h1 span{
+				font:normal 12px Verdana;
+				color:#b8a6ba;
+			}
+		.img_l{
+			float: left;
+			margin:5px 15px 10px 0;
+		}
+		.post{
+			margin:0 15px 15px 15px;
+		}
+		.post p{
+			color:#000;
+			font:12px Verdana;
+			margin-bottom: 10px;
+			text-align: justify;
+		}
+		.post p a{
+			color:#3f282f;
+			text-decoration: underline;
+		}
+		/* pagination */
+	.pagination{
+		margin:20px;
+		}
+		.pagination span,
+		.pagination a{
+			background-color: #3f282f;
+			border-radius: 5px;
+			color:#fff;
+			margin:0;
+			padding:3px 8px;
+			text-decoration: none;
+		}
+		.pagination span.current{
+			background-color: #6e4652;
+			color: #fff;
+			border-radius: 5px;
+		}
+		.pagination a:hover{
+			background-color: #6e4652;
+		}
+		.pagination span.dots{
+			border:none;
+		}
+.sidebar{
+	float: right;
+	margin:0 0 20px 10px;
+	width: 225px;
+	}
+	.vidget{
+		background-color: #e7e2e3;
+		border:1px solid #d7d3d4;
+		-moz-border-radius: 8px;
+		-webkit-border-radius: 8px;
+		border-radius: 8px;
+		margin:0 20px 20px 0;
+		}
+		.vidget h2{
+			font:18px "Century Gothic";
+			background-color: #3f282f;
+			-moz-border-radius: 8px 8px 0 0;
+			-webkit-border-radius: 8px 8px 0 0;
+			border-radius: 8px 8px 0 0;
+			color:#fff;
+			padding:10px 0;
+			text-align: center;
+		}
+		.vidget ul{
+			list-style: none;
+			padding:10px 15px;
+			}
+			.vidget ul li::before{
+				content: "- ";
+			}
+			.vidget ul li{
+				border-bottom: 1px solid #c8bbbd;
+				border-top: 1px solid #fff;
+				font-family: "Century Gothic";
+				padding-left: 20px;
+			}
+			.vidget ul li:first-child{
+				border-top: none;
+			}
+			.vidget ul li:last-child{
+				border-bottom: none;
+			}
+				.vidget ul li a{
+					color: #000;
+				    font-size: 14px;
+				    padding: 8px 5px 10px 5px;
+				    text-decoration: underline;
+				    display: inline-block;
+				    width: 80%;
+				}
+				.vidget ul li a:hover{
+					text-decoration: none;
+				}
+.footer{
+	overflow: hidden;
+	padding:20px 25px;
+	}
+	.copy{
+		float: left;
+		}
+		.copy a{
+			color:#716b5b;
+			font:26px "Century Gothic";
+			margin:15px 10px 0 0;
+			text-decoration: none;
+		}
+		.copy a span{
+			color:#a73700;
+		}
+		.copy p{
+			color:#000;
+			font:14px Verdana;
+			margin:10px 0 0 0;
+		}
+	.f_menu{
+		float: left;
+		margin:0 110px;
+		}
+		.f_menu h2{
+			color:#3f282f;
+			font:normal 24px "Century Gothic";
+		}
+		.f_menu ul{
+			list-style: none;
+			}
+			.f_menu_ul li::before,
+			.f_menu_cat ul li::before{
+				content:"- ";
+			}
+			.f_menu ul li a{
+				color:#000;
+				font:14px "Century Gothic";
+				text-decoration: underline;
+			}
+			.f_menu ul li a:hover{
+				text-decoration: none;
+			}
+
+
+.comments-title {
+	margin-bottom: 48px;
+	margin-bottom: 3.428571429rem;
+	font-size: 16px;
+	font-size: 1.142857143rem;
+	line-height: 1.5;
+	font-weight: normal;
+}
+.comments-area article {
+	margin: 24px 0;
+	margin: 1.714285714rem 0;
+}
+.comments-area article header {
+	margin: 0 0 10px;
+	/*margin: 0 0 3.428571429rem;*/
+	overflow: hidden;
+	position: relative;
+}
+.comments-area article header img {
+	float: left;
+	padding: 0;
+	line-height: 0;
+}
+.comments-area article header cite,
+.comments-area article header time {
+	display: block;
+	margin-left: 85px;
+	margin-left: 6.071428571rem;
+}
+.comments-area article header cite {
+	font-style: normal;
+	font-size: 15px;
+	font-size: 1.071428571rem;
+	line-height: 1.42857143;
+}
+.comments-area cite b {
+	font-weight: normal;
+}
+.comments-area article header time {
+	line-height: 1.714285714;
+	text-decoration: none;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	color: #5e5e5e;
+}
+.comments-area article header a {
+	text-decoration: none;
+	color: #5e5e5e;
+}
+.comments-area article header a:hover {
+	color: #21759b;
+}
+.comments-area article header cite a {
+	color: #444;
+}
+.comments-area article header cite a:hover {
+	text-decoration: underline;
+}
+.comments-area article header h4 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 6px 12px;
+	padding: 0.428571429rem 0.857142857rem;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	font-weight: normal;
+	color: #fff;
+	background-color: #0088d0;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #009cee, #0088d0);
+	background-image: -ms-linear-gradient(top, #009cee, #0088d0);
+	background-image: -webkit-linear-gradient(top, #009cee, #0088d0);
+	background-image: -o-linear-gradient(top, #009cee, #0088d0);
+	background-image: linear-gradient(top, #009cee, #0088d0);
+	border-radius: 3px;
+	border: 1px solid #007cbd;
+}
+.comments-area .bypostauthor cite span {
+	position: absolute;
+	margin-left: 5px;
+	margin-left: 0.357142857rem;
+	padding: 2px 5px;
+	padding: 0.142857143rem 0.357142857rem;
+	font-size: 10px;
+	font-size: 0.714285714rem;
+}
+.comments-area .bypostauthor cite b {
+	font-weight: bold;
+}
+a.comment-reply-link,
+a.comment-edit-link {
+	color: #686868;
+	font-size: 13px;
+	font-size: 0.928571429rem;
+	line-height: 1.846153846;
+}
+a.comment-reply-link:hover,
+a.comment-edit-link:hover {
+	color: #21759b;
+}
+.commentlist .pingback {
+	line-height: 1.714285714;
+	margin-bottom: 24px;
+	margin-bottom: 1.714285714rem;
+}
+
+/* Comment form */
+#respond {
+	margin-top: 48px;
+	margin-top: 3.428571429rem;
+}
+#respond h3#reply-title {
+	font-size: 16px;
+	font-size: 1.142857143rem;
+	line-height: 1.5;
+}
+#respond h3#reply-title #cancel-comment-reply-link {
+	margin-left: 10px;
+	margin-left: 0.714285714rem;
+	font-weight: normal;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+}
+#respond form {
+	margin: 24px 0;
+	margin: 1.714285714rem 0;
+}
+#respond form p {
+	margin: 11px 0;
+	margin: 0.785714286rem 0;
+}
+#respond form p.logged-in-as {
+	margin-bottom: 24px;
+	margin-bottom: 1.714285714rem;
+}
+#respond form label {
+	display: block;
+	line-height: 1.714285714;
+}
+#respond form input[type="text"],
+#respond form textarea {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-size: 12px;
+	font-family: Verdana;
+	font-size: 0.857142857rem;
+	/*line-height: 1.714285714;*/
+	padding:5px 10px;
+	/*padding: 0.714285714rem;*/
+	width: 100%;
+}
+#respond form p.form-allowed-tags {
+	margin: 0;
+	font-size: 12px;
+	font-size: 0.857142857rem;
+	line-height: 2;
+	color: #5e5e5e;
+}
+.required {
+	color: red;
+}
+.commentlist{
+	list-style: none;
+}
+.commentlist .children{
+	margin-left: 50px;
+	list-style: none;
+}
+.comment article{
+	border: 1px solid #e7e2e3;
+    padding: 10px;
+    border-radius: 5px;
+}
+.comment-content{
+	border: 1px solid #eee;
+	padding:5px 10px;
+    border-radius: 5px;
+}
+input[type="submit"]{
+	padding: 6px 10px;
+	padding: 0.428571429rem 0.714285714rem;
+	font-size: 11px;
+	font-size: 0.785714286rem;
+	line-height: 1.428571429;
+	font-weight: normal;
+	color: #7c7c7c;
+	background-color: #e6e6e6;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -ms-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -webkit-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: -o-linear-gradient(top, #f4f4f4, #e6e6e6);
+	background-image: linear-gradient(top, #f4f4f4, #e6e6e6);
+	border: 1px solid #d2d2d2;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px rgba(64, 64, 64, 0.1);
+}
+input[type="submit"]:hover{
+	color: #5e5e5e;
+	background-color: #ebebeb;
+	background-repeat: repeat-x;
+	background-image: -moz-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: -ms-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: -webkit-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: -o-linear-gradient(top, #f9f9f9, #ebebeb);
+	background-image: linear-gradient(top, #f9f9f9, #ebebeb);
+}
+#comments{
+	font:12px Verdana;
+}
